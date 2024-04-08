@@ -7,9 +7,9 @@ function App() {
   return (
     <>
       <Header />
-      <FirstPokemons />
-      {/* <PokemonsTypes />
-      <PokemonsByType type={"Eau"} />
+      {/* <FirstPokemons /> */}
+      <PokemonsTypes />
+      {/* <PokemonsByType type={"Eau"} />
       <PokemonsByType type={"Plante"} />
       <PokemonsByType type={"Acier"} /> */}
     </>
