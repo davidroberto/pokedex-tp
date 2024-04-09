@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-const FirstPokemons = () => {
+const PokemonsByGeneration = ({ generation }) => {
   const [pokemonsFromApi, setPokemonsFromApi] = useState(null);
 
   useEffect(() => {
-    fetch("https://pokebuildapi.fr/api/v1/pokemon/limit/100")
+    fetch("https://pokebuildapi.fr/api/v1/pokemon/generation/" + generation)
       .then((response) => {
         return response.json();
       })
@@ -15,7 +15,7 @@ const FirstPokemons = () => {
 
   return (
     <section>
-      <h2>Les 100 premiers pokemons</h2>
+      {generation === 1 ? <h1>Les vrais pokemons :</h1> : <h1>Le reste : </h1>}
 
       {pokemonsFromApi ? (
         <>
@@ -41,4 +41,4 @@ const FirstPokemons = () => {
   );
 };
 
-export default FirstPokemons;
+export default PokemonsByGeneration;
