@@ -1,26 +1,15 @@
-import FirstPokemons from "./FirstPokemons";
-import Header from "./Header";
-import PokemonsTypes from "./PokemonsTypes";
-import PokemonsByType from "./PokemonsByType";
-import PokemonsByGeneration from "./PokemonsByGeneration";
-import SearchPokemonByName from "./SearchPokemonByName";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./page/HomePage";
+import ContactPage from "./page/ContactPage";
 
 function App() {
   return (
-    <>
-      <Header />
-      <SearchPokemonByName />
-      {/* <PokemonsByGeneration generation={1} />
-      <PokemonsByGeneration generation={2} />
-      <PokemonsByGeneration generation={3} />
-      <PokemonsByGeneration generation={4} />
-      <PokemonsByGeneration generation={5} />
-      <FirstPokemons />
-      <PokemonsTypes />
-      <PokemonsByType type={"Eau"} />
-      <PokemonsByType type={"Plante"} />
-      <PokemonsByType type={"Acier"} /> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/me-contacter" element={<ContactPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
