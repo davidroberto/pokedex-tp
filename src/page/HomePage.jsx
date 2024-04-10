@@ -1,10 +1,11 @@
-import Header from "../Header";
+import FirstPokemons from "../component/FirstPokemons";
+import Header from "../component/Header";
 
 const HomePage = () => {
   return (
     <>
       <Header />
-      <p>Je suis la page d'accueil</p>
+      <FirstPokemons />
     </>
   );
 };

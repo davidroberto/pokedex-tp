@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./page/HomePage";
-import ContactPage from "./page/ContactPage";
+import PokemonResistancePage from "./page/PokemonResistancePage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/me-contacter" element={<ContactPage />} />
+        <Route path="/resistance" element={<PokemonResistancePage />} />
       </Routes>
     </BrowserRouter>
   );
