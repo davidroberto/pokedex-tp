@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header>
@@ -8,9 +10,24 @@ const Header = () => {
         />
 
         <ul>
-          <li>Accueil</li>
-          <li>Tous les pokemons</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/">Accueil</Link>
+          </li>
+          <li>
+            <Link to="/resistance">Résistance</Link>
+          </li>
+          <li>
+            <Link to="/generations">Générations</Link>
+          </li>
+          <li>
+            <Link to="/by-type">Par type</Link>
+          </li>
+          <li>
+            <Link to="/types">Types</Link>
+          </li>
+          <li>
+            <Link to="/search">Rechercher</Link>
+          </li>
         </ul>
       </nav>
     </header>
